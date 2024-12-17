@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhobig | Laundry Services</title>
+    
+    <!-- External CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="https://media.glassdoor.com/sqll/3729955/dhobi-g-squareLogo-1620741106828.png" alt="Dhobig Logo" class="logo me-2">
+                <span>hobi G </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                
+                    
+                </ul>
+                <a href="bookk.html" class="btn btn-primary ms-3">Book Now</a>
+            </div>
+        </div>
+    </nav>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="heading">
+            <span class="animate scroll" style="--i:1;"></span>
+        </h2>
+        <div class="about-img">
+            <img src="https://media.glassdoor.com/sqll/3729955/dhobi-g-squareLogo-1620741106828.png" alt="Dhobig Logo">
+            <span class="circle-spin"></span>
+            <span class="animate scroll" style="--i:2;"></span>
+        </div>
+        <div class="about-content">
+            <h2>
+                Hi there! Glad to see you here.
+                <span class="animate scroll" style="--i:3;"></span>
+            </h2>
+            <p >
+                Fresh Clothes, Fresh Start! 🚀 Tap ‘Book Now’ and Let the Laundry Magic Begin!   
+                <span class="animate scroll" style="--i:2;"></span>
+            </p>
+            <div class="btn-box btns">
+                <a href="bookk.html" class="btn btn-primary ms-3">Book Now</a>
+                <span class="animate scroll" style="--i:5;"></span>
+            </div>
+        </div>
+    </section>
+    <!-- Schedule Pickup Section -->
+    <section id="schedule-pickup" class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Company Information Column -->
+                <div class="col-md-5">
+                    <div class="company-info h-100">
+                        <h3 class="mb-4">Why Choose DG Laundry?</h3>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="service-icon me-3">🧼</div>
+                                    <div>
+                                        <h5 class="mb-1">Professional Cleaning</h5>
+                                        <p class="text-muted small">Advanced cleaning techniques for all fabric types</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="service-icon me-3">🚚</div>
+                                    <div>
+                                        <h5 class="mb-1">Free Pickup & Delivery</h5>
+                                        <p class="text-muted small">Convenient service within 24 hours</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="service-icon me-3">🌿</div>
+                                    <div>
+                                        <h5 class="mb-1">Eco-Friendly Solutions</h5>
+                                        <p class="text-muted small">Green cleaning practices and biodegradable detergents</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="alert alert-info mt-3" role="alert">
+                                    <strong>Current Promotion:</strong> 20% off first booking with code WELCOME20
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Form Column -->
+                <div class="col-md-7">
+                    <div class="contact-form">
+                        <h3 class="text-center mb-4">Contact Us for More Information</h3>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="Enter your contact number" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="service-interest" class="form-label">Service of Interest</label>
+                                <select class="form-select" id="service-interest" required>
+                                    <option value="">Select Service You're Interested In</option>
+                                    <option value="premium">Premium Laundry Services</option>
+                                    <option value="regular">Regular Laundry Cleaning</option>
+                                    <option value="dry-cleaning">Dry Cleaning</option>
+                                    <option value="express">Express Laundry Services</option>
+                                    <option value="other">Other Services</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Preferred Contact Method</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="contact-method" id="phone-contact" value="phone">
+                                    <label class="form-check-label" for="phone-contact">Phone Call</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="contact-method" id="email-contact" value="email">
+                                    <label class="form-check-label" for="email-contact">Email</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="contact-method" id="whatsapp-contact" value="whatsapp">
+                                    <label class="form-check-label" for="whatsapp-contact">WhatsApp</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="additional-details" class="form-label">Additional Details or Questions</label>
+                                <textarea class="form-control" id="additional-details" rows="3" placeholder="Please provide any additional information or questions you may have"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Explore Our Services</h2>
+            <div class="row">
+                <!-- Services Grid -->
+                <div class="col-md-4 mb-4">
+                    <div class="service-card shadow-sm text-center p-4">
+                        <i class="fas fa-tshirt fa-3x mb-3 text-primary"></i>
+                        <h4 class="mb-3">Wash & Fold</h4>
+                        <p>Effortless cleaning and folding for your daily wear.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card shadow-sm text-center p-4">
+                        <i class="fas fa-star fa-3x mb-3 text-warning"></i>
+                        <h4 class="mb-3">Dry Cleaning</h4>
+                        <p>Meticulous care for suits, dresses, and delicate fabrics.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card shadow-sm text-center p-4">
+                        <i class="fas fa-soap fa-3x mb-3 text-info"></i>
+                        <h4 class="mb-3">Stain Treatment</h4>
+                        <p>Specialized solutions to remove tough stains effectively.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card shadow-sm text-center p-4">
+                        <i class="fas fa-wind fa-3x mb-3 text-secondary"></i>
+                        <h4 class="mb-3">Ironing Services</h4>
+                        <p>Crisp ironing for a perfectly polished look.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card shadow-sm text-center p-4">
+                        <i class="fas fa-shipping-fast fa-3x mb-3 text-success"></i>
+                        <h4 class="mb-3">Express Delivery</h4>
+                        <p>Quick turnaround for your urgent laundry needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card shadow-sm text-center p-4">
+                        <i class="fas fa-hand-sparkles fa-3x mb-3 text-danger"></i>
+                        <h4 class="mb-3">Eco-Friendly Cleaning</h4>
+                        <p>Eco-friendly ways to support your health and the planet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service Contact Details -->
+    <section id="service-contacts" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Service Contact Details</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="contact-card text-center">
+                        <i class="fas fa-crown fa-3x feature-icon mb-3"></i>
+                        <h4 class="mb-3">Premium Laundry</h4>
+                        <p><strong>Dedicated Line:</strong> +1 (555) 123-4567</p>
+                        <p><strong>Email:</strong> premium@dhobig.com</p>
+                        <p class="text-muted">Personalized service, 24/7 support</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="contact-card text-center">
+                        <i class="fas fa-tshirt fa-3x feature-icon mb-3"></i>
+                        <h4 class="mb-3">Regular Laundry</h4>
+                        <p><strong>Customer Line:</strong> +1 (555) 987-6543</p>
+                        <p><strong>Email:</strong> regular@dhobig.com</p>
+                        <p class="text-muted">Standard support hours</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="contact-card text-center">
+                        <i class="fas fa-wind fa-3x feature-icon mb-3"></i>
+                        <h4 class="mb-3">Dry Cleaning</h4>
+                        <p><strong>Specialist Line:</strong> +1 (555) 246-8101</p>
+                        <p><strong>Email:</strong> drycleaning@dhobig.com</p>
+                        <p class="text-muted">Expert fabric care consultation</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="contact-card text-center">
+                        <i class="fas fa-truck fa-3x feature-icon mb-3"></i>
+                        <h4 class="mb-3">RapidDG Express</h4>
+                        <p><strong>Express Helpline:</strong> +1 (555) 135-7910</p>
+                        <p><strong>Email:</strong> express@dhobig.com</p>
+                        <p class="text-muted">Urgent service support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fabric Care & Materials Guide -->
+    <section id="fabric-materials" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Fabric Care Guide</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="material-card text-center">
+                        <i class="fas fa-tshirt fa-3x feature-icon mb-3 text-primary"></i>
+                        <h4 class="mb-3">Cotton</h4>
+                        <p>Durable, breathable fabric. Machine washable at low temperatures.</p>
+                        <span class="badge bg-primary">Easy Care</span>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <div class="material-card text-center">
+                        <i class="fas fa-soap fa-3x feature-icon mb-3 text-warning"></i>
+                        <h4 class="mb-3">Silk</h4>
+                        <p>Delicate fabric requiring gentle handling. Dry clean recommended.</p>
+                        <span class="badge bg-warning text-dark">Delicate</span>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <div class="material-card text-center">
+                        <i class="fas fa-cut fa-3x feature-icon mb-3 text-danger"></i>
+                        <h4 class="mb-3">Wool</h4>
+                        <p>Requires special care. Professional cleaning prevents shrinkage.</p>
+                        <span class="badge bg-danger">Professional Care</span>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <div class="material-card text-center">
+                        <i class="fas fa-shirt fa-3x feature-icon mb-3 text-success"></i>
+                        <h4 class="mb-3">Synthetic</h4>
+                        <p>Versatile fabrics. Most can be machine washed with care.</p>
+                        <span class="badge bg-success">Moderate Care</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="pricing-section">
+        <div class="container">
+            <h1 class="text-center mb-5 display-4">Laundry Pro Cleaning Services</h1>
+            <p class="text-center mb-5 lead">Choose the perfect plan that fits your lifestyle and cleaning needs</p>
+            <div class="row">
+                <!-- Standard Plan -->
+                <div class="col-md-4 mb-4">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <i class="fas fa-shirt pricing-icon"></i>
+                            <h3>Standard Clean</h3>
+                        </div>
+                        <div class="pricing-body text-center">
+                            <div class="pricing-price">₹19.99<small>/month</small></div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i>Up to 15 lbs Wash & Fold</li>
+                                <li><i class="fas fa-truck"></i>Weekly Pickup</li>
+                                <li><i class="fas fa-soap"></i>Standard Detergent</li>
+                                <li><i class="fas fa-tshirt"></i>Basic Ironing</li>
+                            </ul>
+                            <button class="btn pricing-btn mt-4 w-100">Select Plan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="col-md-4 mb-4">
+                    <div class="pricing-card">
+                        <span class="featured-badge">Most Popular</span>
+                        <div class="pricing-header">
+                            <i class="fas fa-crown fa-3x feature-icon mb-3"></i>
+                            <h3>Premium Clean</h3>
+                        </div>
+                        <div class="pricing-body text-center">
+                            <div class="pricing-price">₹39.99<small>/month</small></div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i>Up to 30 lbs Wash & Fold</li>
+                                <li><i class="fas fa-truck"></i>Twice Weekly Pickup</li>
+                                <li><i class="fas fa-leaf"></i>Eco-Friendly Detergent</li>
+                                <li><i class="fas fa-tshirt"></i>Professional Ironing</li>
+                                <li><i class="fas fa-soap"></i>Stain Removal</li>
+                            </ul>
+                            <button class="btn pricing-btn mt-4 w-100">Select Plan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="col-md-4 mb-4">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <i class="fas fa-building pricing-icon"></i>
+                            <h3>Enterprise Solution</h3>
+                        </div>
+                        <div class="pricing-body text-center">
+                            <div class="pricing-price">Custom</div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-infinity"></i>Unlimited Laundry Volume</li>
+                                <li><i class="fas fa-truck"></i>Daily Pickup</li>
+                                <li><i class="fas fa-user-tie"></i>Dedicated Account Manager</li>
+                                <li><i class="fas fa-rocket"></i>Priority Processing</li>
+                                <li><i class="fas fa-flask"></i>Custom Detergent Blend</li>
+                            </ul>
+                            <button href="bookk.html" class="btn pricing-btn mt-4 w-100">Contact Sales</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="fas fa-shield-alt guarantee-icon"></i>
+                    <h4>100% Satisfaction Guarantee</h4>
+                    <p>We're confident in our service. If you're not completely satisfied, we'll re-clean your items for free.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-clock guarantee-icon"></i>
+                    <h4>Quick Turnaround</h4>
+                    <p>Most orders are processed and returned within 24-48 hours, ensuring you always have clean clothes.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-leaf guarantee-icon"></i>
+                    <h4>Eco-Friendly Practices</h4>
+                    <p>We use environmentally friendly detergents and energy-efficient machines to minimize our carbon footprint.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">What Our Customers Say</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>Dhobig has changed the way I handle laundry. Fast and efficient!</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <div class="testimonial-avatar">
+                            <img src="/api/placeholder/50/50" alt="Ramm" class="avatar">
+                        </div>
+                        <div class="testimonial-author">
+                            <h5>Ramm</h5>
+                            <span>Mumbai</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>Professional service with great attention to detail. Highly recommend!</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <div class="testimonial-avatar">
+                            <img src=" ........." alt="Gopinath" class="avatar">
+                        </div>
+                        <div class="testimonial-author">
+                            <h5>Gopinath</h5>
+                            <span>Bangalore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>wooohh...! Amazing eco-friendly options for laundry care!</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <div class="testimonial-avatar">
+                            <img src="/api/placeholder/50/50" alt="mohan krishna" class="avatar">
+                        </div>
+                        <div class="testimonial-author">
+                            <h5>Mohan Krishna</h5>
+                            <span>Delhi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- FAQ Section -->
+    <section id="faqs" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="accordion" id="accordionFAQs">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            How long does a typical laundry service take?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQs">
+                        <div class="accordion-body">
+                            Our standard service takes 24-48 hours. For urgent needs, we offer RapidDG Express with 4-hour turnaround.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Do you offer pickup and delivery?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQs">
+                        <div class="accordion-body">
+                            Yes! We provide free pickup and delivery within our service area. Simply schedule your pickup online.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            What payment methods do you accept?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQs">
+                        <div class="accordion-body">
+                            We accept credit/debit cards, PayPal, and mobile payment methods like Apple Pay and Google Pay.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="bookk.html" class="text-white">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6>Contact Us</h6>
+                    <p>Email: support@dhobig.com<br>Phone: (555) 123-4567</p>
+                </div>
+                <div class="col-md-4">
+                    <h6>Follow Us</h6>
+                    <div>
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p>&copy; 2024 Machiraju HariRam.@ All Rights Reserved.</p>
+        </div>
+    </footer>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

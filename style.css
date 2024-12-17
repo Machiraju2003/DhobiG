@@ -1,0 +1,942 @@
+:root {
+    /* Color Palette - Enhanced Vibrancy */
+    --primary-color: #0a2342;         /* Deep Navy Blue */
+    --secondary-color: #3498db;       /* Bright Blue */
+    --accent-color: #cc2e65;          /* Vibrant Green */
+    --text-color: #2c3e50;            /* Dark Slate */
+    --background-color: #ecf0f1;      /* Light Gray-Cyan */
+    --white: #ffffff;
+
+    /* Typography and Design Tokens */
+    --font-primary: 'Inter', 'Segoe UI', 'Poppins', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    --bg-gradient: linear-gradient(45deg, #f3f4f6 0%, #e9ecef 100%);
+    --card-bg: linear-gradient(135deg, #ffffff 0%, #f1f3f5 100%);
+    --shadow-subtle: 0 10px 25px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.12);
+    --transition-speed: 0.3s;
+
+    --font-headings: 'Poppins', 'Inter', sans-serif;
+    --font-body: 'Roboto', 'Open Sans', sans-serif;
+    --font-accent: 'Montserrat', sans-serif;
+}
+
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Enhanced Heading Styles */
+h1 {
+    font-family: var(--font-headings);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: var(--secondary-color);
+}
+
+h2 {
+    font-family: var(--font-headings);
+    font-size: 2.75rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+    margin-bottom: 1.25rem;
+}
+
+h3 {
+    font-family: var(--font-headings);
+    font-size: 2.25rem;
+    font-weight: 500;
+    color: var(--accent-color);
+    letter-spacing: -0.25px;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-family: var(--font-accent);
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    letter-spacing: -0.1px;
+    line-height: 1.5;
+}
+
+h5, h6 {
+    font-family: var(--font-accent);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 0;
+}
+
+/******************************************************* Enhanced Paragraph Styles ********************************/
+p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.lead {
+    font-family: var(--font-accent);
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/****************************************************************** Enhanced Image Styles *******************************************8*/
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.1);
+}
+
+.image-container img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+    width: 100%;
+    height: auto;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1) contrast(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg, 
+        rgba(52, 152, 219, 0.3) 0%, 
+        rgba(6, 40, 125, 0.3) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+/* Text Variation Utilities */
+.text-primary { color: var(--primary-color) !important; }
+.text-secondary { color: var(--secondary-color) !important; }
+.text-accent { color: var(--accent-color) !important; }
+.text-muted { color: var(--text-muted) !important; }
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+    h4 { font-size: 1.5rem; }
+    h5, h6 { font-size: 1.25rem; }
+}
+/************************************************* Global Reset and Base Styles **********************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography and Common Elements */
+h1, h2, h3, h4, h5 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/******************************************************** Navigation Styles *******************************************8*/
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-speed) ease;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.nav-link {
+    color: var(--white);
+    margin: 0 10px;
+    transition: color var(--transition-speed) ease;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/******************************************  Buttons and Navigation Buttons *************************************/
+.btn-primary, 
+.btn-outline-light,
+.btn-nav,
+.pricing-card {
+    border-radius: 15px;
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-primary, 
+.btn-outline-light,
+.btn-nav {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.btn-primary:hover, 
+.btn-outline-light:hover,
+.btn-nav:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/***************************************************** Booking Section and Booking Steps ****************************************8*/
+.booking-section {
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--shadow-subtle);
+}
+
+.booking-container {
+    padding: 30px;
+    overflow: hidden;
+}
+
+.booking-step {
+    display: none;
+}
+
+.booking-step.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/******************************(bookking step indication) Progress and Step Indicators ****************************/
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.step-dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e0e7f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    transition: all 0.3s ease;
+}
+
+.step-dot.active {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.progress {
+    height: 5px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+
+
+/*************************** Service Highlights ***************************/
+.service-highlight {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.service-highlight:hover {
+    transform: translateX(10px);
+}
+
+.service-highlight i {
+    color: var(--secondary-color);
+    margin-right: 15px;
+    font-size: 24px;
+}
+
+.why-dhobig {
+    background-color: #f9fbfc;
+    border-left: 4px solid var(--secondary-color);
+    padding: 30px;
+    height: 100%;
+}
+
+/****************************************** Service and Card Interactions *********************************/
+.service-card, 
+.contact-card, 
+.material-card, 
+.testimonial-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(95, 1, 1, 0.1);
+    transition: all var(--transition-speed) ease;
+}
+
+.service-card:hover, 
+.contact-card:hover, 
+.material-card:hover, 
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(91, 1, 1, 0.15);
+}
+
+
+/* Form and Input Styles */
+input, 
+textarea, 
+.form-select {
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    transition: box-shadow var(--transition-speed) ease;
+}
+
+input:focus, 
+textarea:focus, 
+.form-select:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+/***************************************** Footer Styles ************************************/
+/* ... (previous CSS remains the same) ... */
+
+/* Footer Styles */
+footer {
+    background-color: var(--color-navy-blue);
+    color: var(--color-white);
+    padding: 2rem 0;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+footer h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+footer .col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding: 0 15px;
+}
+
+footer ul.list-unstyled {
+    list-style: none;
+    padding: 0;
+}
+
+footer a {
+    color: var(--color-light-gray);
+    text-decoration: none;
+    transition: color var(--transition-duration) ease;
+}
+
+footer a:hover {
+    color: var(--color-bright-blue);
+}
+
+footer hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 1.5rem 0;
+}
+
+footer .social-icons a {
+    color: var(--color-white);
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    transition: color var(--transition-duration) ease;
+}
+
+footer .social-icons a:hover {
+    color: var(--color-bright-blue);
+}
+
+footer .copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 1rem;
+}
+
+/* Responsive Footer Adjustments */
+@media (max-width: 768px) {
+    footer .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    footer .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.animated-hover:hover {
+    animation: slideUp 0.5s ease-in-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .carousel-item img {
+        height: 300px;
+    }
+}
+
+/* Utility Classes */
+.bg-light {
+    background-color: var(--background-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+
+
+
+/*************gurantee section (home)****************/
+
+
+.guarantee-section {
+    background-color: #f9f9f9;
+    padding: 3rem 0;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.guarantee-icon {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+
+
+.heading {
+    position: relative;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.span {
+    color: var(--main-color);
+}
+
+
+.about-content {
+    text-align: center;
+}
+
+.about-content h3 {
+    position: relative;
+    display: inline-block;
+    font-size: 2.6rem;
+}
+
+.about-content p {
+    position: relative;
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.btn-box.btns {
+    display: inline-block;
+    width: 15rem;
+}
+
+.btn-box.btns a::before {
+    background: var(--second-bg-color);
+}
+
+
+.btn-primary {
+    background: var(--secondary-color);
+    border: none;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--accent-color);
+    box-shadow: 0 6px 10px var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+
+/*********************logo spin section *********************************/
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--background-color);
+    padding-bottom: 6rem;
+}
+
+.about-img {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 50%;
+    border-radius: 50%;
+    border: 0.2rem solid var(--primary-color);
+}
+
+.about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    border-top: 0.2rem solid var(--background-color);
+    border-bottom: 0.2rem solid var(--background-color);
+    border-left: 0.2rem solid var(--primary-color);
+    border-right: 0.2rem solid var(--primary-color);
+    animation: aboutSpinner 8s linear infinite;
+}
+
+@keyframes aboutSpinner {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+:root {
+    --primary-color: #1b026d;
+    --secondary-color: #3498db;
+    --accent-color: #17006a;
+}
+
+body {
+    background-color: #f4f7f6;
+    font-family: 'Arial', sans-serif;
+}
+
+.booking-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.step-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.step-dot.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.why-dhobig {
+    background-color: #f1f8ff;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.service-highlight {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease;
+}
+
+.service-highlight:hover {
+    transform: translateY(-5px);
+}
+
+.service-highlight i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-right: 20px;
+}
+
+.material-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.material-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/*********************************** Carousel Styles ******************************************/
+.carousel-item img {
+object-fit: cover;
+max-height: 400px;
+filter: brightness(0.8) contrast(1.1);
+transition: transform var(--transition-speed) ease;
+}
+
+.carousel-item img:hover {
+transform: scale(1.05);
+}
+
+.carousel-caption {
+background-color: rgba(249, 186, 188, 0.6);
+border-radius: 10px;
+padding: 20px;
+}
+
+
+/****************************pricing section (premium, enterpize, standard)***************************/
+
+:root {
+    /* Laundry-Inspired Color Palette */
+    --laundry-primary: #2c3e50;        /* Deep Navy */
+    --laundry-secondary: #3498db;      /* Clean Blue */
+    --laundry-accent: #13046d;         /* Fresh Green */
+    --laundry-light: #ecf0f1;          /* Soft White */
+    --laundry-gradient-primary: linear-gradient(45deg, #3498db 0%, #2980b9 100%);
+    --laundry-gradient-secondary: linear-gradient(135deg, #1b026d 0%, #2b0271 100%);
+}
+
+/* Pricing Section Base Styles */
+.pricing-section {
+    background: var(--laundry-light);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Bubble Background Animation */
+.pricing-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(ellipse at top left, rgba(52, 152, 219, 0.1) 0%, transparent 70%),
+        radial-gradient(ellipse at bottom right, rgba(46, 204, 113, 0.1) 0%, transparent 70%);
+    z-index: 1;
+    animation: bubble-float 15s ease infinite alternate;
+}
+
+@keyframes bubble-float {
+    0% { 
+        transform: scale(1) rotate(0deg); 
+        opacity: 0.7;
+    }
+    100% { 
+        transform: scale(1.05) rotate(2deg); 
+        opacity: 1;
+    }
+}
+
+/* Pricing Card with Laundry Fold Interaction */
+.pricing-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.1);
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.pricing-card:hover {
+    transform: 
+        translateY(-15px) 
+        rotateX(7deg) 
+        rotateY(3deg);
+    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.2);
+}
+
+/* Pricing Header with Folding Animation */
+.pricing-header {
+    background: var(--laundry-gradient-primary);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.pricing-card:hover .pricing-header {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+}
+
+/* Pricing Icon with Spin Effect */
+.pricing-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    opacity: 0.9;
+    transition: all 0.5s ease;
+    animation: soft-spin 10s linear infinite;
+}
+
+@keyframes soft-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.pricing-card:hover .pricing-icon {
+    animation: dynamic-spin 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes dynamic-spin {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(180deg); }
+    100% { transform: scale(1) rotate(360deg); }
+}
+
+/* Price with Washing Motion */
+.pricing-price {
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: var(--laundry-gradient-primary);
+    --webkit-background-clip: text;
+    --webkit-text-fill-color: transparent;
+    position: relative;
+    animation: price-wash 3s ease-in-out infinite;
+}
+
+@keyframes price-wash {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(-2deg); }
+    75% { transform: translateX(5px) rotate(2deg); }
+}
+
+/* Features List with Fold Interaction */
+.pricing-features li {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(44, 62, 80, 0.1);
+    display: flex;
+    align-items: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-features li:hover {
+    background-color: rgba(46, 204, 113, 0.05);
+    transform: perspective(500px) rotateX(10deg);
+}
+
+/* Call-to-Action Button with Laundry Fold */
+.pricing-btn {
+    background: var(--laundry-gradient-primary);
+    border: none;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.pricing-btn:hover {
+    transform: scale(1.05) skew(-5deg, 0);
+    box-shadow: 0 15px 30px rgba(46, 204, 113, 0.2);
+}
+
+/* Featured Badge with Fold Effect */
+.featured-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: -3rem;
+    background: var(--laundry-gradient-secondary);
+    color: white;
+    padding: 0.5rem 3rem;
+    transform: rotate(45deg);
+    box-shadow: 0 5px 20px rgba(46, 204, 113, 0.3);
+    animation: badge-wave 2s ease-in-out infinite;
+}
+
+@keyframes badge-wave {
+    0%, 100% { transform: rotate(45deg) translateY(0); }
+    50% { transform: rotate(45deg) translateY(-10px); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .pricing-card {
+        margin-bottom: 2rem;
+        transform: none !important;
+    }
+    
+    .pricing-header {
+        padding: 1.5rem;
+    }
+    
+    .pricing-price {
+        font-size: 2.3rem;
+    }
+}
+
+
+
+
+/******************************************************/
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 0;
+    background-color: var(--color-light-gray);
+}
+
+.about-content {
+    max-width: 800px;
+    padding-right: 2rem;
+}
+
+.about-content h2 {
+    font-size: 2.75rem;
+    color: var(--color-navy-blue);
+    margin-bottom: 1rem;
+    position: relative;
+    line-height: 1.3;
+}
+
+.about-content h2 .highlight {
+    color: var(--color-bright-blue);
+    display: block;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: var(--color-dark-slate);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}

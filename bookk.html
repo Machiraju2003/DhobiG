@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhobig - Laundry & Cleaning Services</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+     <!-- Custom CSS -->
+     <link rel="stylesheet" href="style.css">
+    <style>
+       
+
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="https://media.glassdoor.com/sqll/3729955/dhobi-g-squareLogo-1620741106828.png" alt="Dhobig Logo" class="logo me-2">
+                <span>hobi G </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                
+                    
+                </ul>
+                <a href="bookk.html" class="btn btn-primary ms-3">Book Now</a>
+            </div>
+        </div>
+    </nav>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="heading">
+            <span class="animate scroll" style="--i:1;"></span>
+        </h2>
+        <div class="about-img">
+            <img src="https://media.glassdoor.com/sqll/3729955/dhobi-g-squareLogo-1620741106828.png" alt="Dhobig Logo">
+            <span class="circle-spin"></span>
+            <span class="animate scroll" style="--i:2;"></span>
+        </div>
+        <div class="about-content">
+            <h2>
+                Clean Clothes, Fresh Start,<br>
+                One Click Away. ✨</br>
+                <span class="animate scroll" style="--i:3;"></span>
+            </h2>
+        </div>
+    </section>
+
+    <!--- booking section-->
+    <div class="container py-5">
+        <div class="booking-container">
+            <div class="row g-0">
+                <!-- Booking Form Section -->
+                <div class="col-md-7 p-4">
+                    <div class="progress mb-4" style="height: 5px;">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 0%"></div>
+                    </div>
+
+                    <div class="step-indicator">
+                        <div class="step-dot active">1</div>
+                        <div class="step-dot">2</div>
+                        <div class="step-dot">3</div>
+                        <div class="step-dot">4</div>
+                        <div class="step-dot">5</div>
+                    </div>
+
+                    <form id="bookingForm" class="mt-4">
+                        <!-- Existing Schedule Pickup Section Remains Unchanged -->
+                        <div id="pickupStep" class="booking-step active">
+                            <h4 class="text-center mb-4">Schedule Pickup</h4>
+                            <div class="mb-3">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="radio" name="pickupOption" id="pickupEarliest" value="earliest" required>
+                                    <label class="form-check-label" for="pickupEarliest">
+                                        <i class="fas fa-bolt me-2"></i> Earliest - In the next 15 mins
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pickupOption" id="pickupLater" value="later">
+                                    <label class="form-check-label" for="pickupLater">
+                                        <i class="far fa-calendar-alt me-2"></i> Schedule Later
+                                    </label>
+                                </div>
+
+                                <div id="laterPickupDetails" class="mt-3" style="display:none;">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label class="form-label">Date</label>
+                                            <input type="date" class="form-control" name="pickupDate">
+                                        </div>
+                                        <div class="col-3">
+                                            <label class="form-label">Hour</label>
+                                            <select class="form-select" name="pickupHour">
+                                                <option value="">Hour</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-3">
+                                            <label class="form-label">Minute</label>
+                                            <select class="form-select" name="pickupMinute">
+                                                <option value="">Min</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary w-100 next-step">Next Step</button>
+                        </div>
+                            
+                    <!-- Step 2: Frequency -->
+                    <div id="frequencyStep" class="booking-step">
+                        <h4 class="text-center mb-4">Service Frequency</h4>
+                        <div class="mb-3">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="frequency" id="frequencyOnce" value="once" required>
+                                <label class="form-check-label" for="frequencyOnce">
+                                    Just Once
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="frequency" id="frequencyWeekly" value="weekly">
+                                <label class="form-check-label" for="frequencyWeekly">
+                                    Weekly
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="frequency" id="frequencyCustom" value="custom">
+                                <label class="form-check-label" for="frequencyCustom">
+                                    Custom
+                                </label>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-secondary prev-step">Previous</button>
+                            <button type="button" class="btn btn-primary next-step">Next Step</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Services -->
+                    <div id="servicesStep" class="booking-step">
+                        <h4 class="text-center mb-4">Select Services</h4>
+                        <div class="services-container">
+                            <div class="service-item" data-service="wash-fold">
+                                <div class="d-flex justify-content-between">
+                                    <h5>Wash & Fold</h5>
+                                    <span>₹30 per item</span>
+                                </div>
+                                <div class="service-quantity mt-2">
+                                    <label>Number of Items</label>
+                                    <input type="number" class="form-control service-quantity-input" name="washFoldQuantity" min="0" value="0">
+                                </div>
+                            </div>
+
+                            <div class="service-item" data-service="wash-iron">
+                                <div class="d-flex justify-content-between">
+                                    <h5>Wash & Iron</h5>
+                                    <span>₹45 per item</span>
+                                </div>
+                                <div class="service-quantity mt-2">
+                                    <label>Number of Items</label>
+                                    <input type="number" class="form-control service-quantity-input" name="washIronQuantity" min="0" value="0">
+                                </div>
+                            </div>
+
+                            <div class="service-item" data-service="dry-clean">
+                                <div class="d-flex justify-content-between">
+                                    <h5>Dry Clean</h5>
+                                    <span>Starting from ₹30</span>
+                                </div>
+                                <div class="service-quantity mt-2">
+                                    <label>Number of Items</label>
+                                    <input type="number" class="form-control service-quantity-input" name="dryCleanQuantity" min="0" value="0">
+                                </div>
+                            </div>
+
+                            <div class="total-summary mt-3">
+                                <h5>Total Items: <span id="totalItems">0</span></h5>
+                                <h5>Total Price: ₹<span id="totalPrice">0</span></h5>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-3">
+                            <button type="button" class="btn btn-secondary prev-step">Previous</button>
+                            <button type="button" class="btn btn-primary next-step">Next Step</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: User Information -->
+                    <div id="userInfoStep" class="booking-step">
+                        <h4 class="text-center mb-4">Your Information</h4>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Mobile Number</label>
+                                <input type="tel" class="form-control" name="mobile" required>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" name="email" required>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-secondary prev-step">Previous</button>
+                            <button type="button" class="btn btn-primary next-step">Next Step</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Address -->
+                    <div id="addressStep" class="booking-step">
+                        <h4 class="text-center mb-4">Pickup Location</h4>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Apartment Number</label>
+                                <input type="text" class="form-control" name="apartmentNumber" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Street</label>
+                                <input type="text" class="form-control" name="street" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Area</label>
+                                <input type="text" class="form-control" name="area" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Pincode</label>
+                                <input type="text" class="form-control" name="pincode" required>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label class="form-label">City</label>
+                                <input type="text" class="form-control" name="city" value="Chennai" required>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label class="form-label">Landmark (Optional)</label>
+                                <input type="text" class="form-control" name="landmark">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-secondary prev-step">Previous</button>
+                            <button type="submit" class="btn btn-success">Book Service</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+
+                <!-- Why Dhobig Section with Enhanced Design -->
+                <div class="col-md-5 why-dhobig d-flex flex-column justify-content-center">
+                    <h3 class="mb-4 text-center">Why Choose Dhobig?</h3>
+                    
+                    <div class="service-highlight">
+                        <i class="fas fa-truck"></i>
+                        <div>
+                            <h5 class="mb-1">Free Pickup & Delivery</h5>
+                            <p class="text-muted mb-0">Convenient doorstep service across Chennai</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-highlight">
+                        <i class="fas fa-tshirt"></i>
+                        <div>
+                            <h5 class="mb-1">Professional Cleaning</h5>
+                            <p class="text-muted mb-0">Expert care for all types of garments</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-highlight">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h5 class="mb-1">100% Satisfaction Guarantee</h5>
+                            <p class="text-muted mb-0">We ensure quality or your money back</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-highlight">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h5 class="mb-1">Quick Turnaround</h5>
+                            <p class="text-muted mb-0">Most orders completed within 24-48 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-highlight">
+                        <i class="fas fa-leaf"></i>
+                        <div>
+                            <h5 class="mb-1">Eco-Friendly Practices</h5>
+                            <p class="text-muted mb-0">Environmentally conscious cleaning solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fabric Care & Materials Guide -->
+    <section id="fabric-materials" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Fabric Care Guide</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="material-card text-center">
+                        <i class="fas fa-tshirt fa-3x feature-icon mb-3 text-primary"></i>
+                        <h4 class="mb-3">Cotton</h4>
+                        <p>Durable, breathable fabric. Machine washable at low temperatures.</p>
+                        <span class="badge bg-primary">Easy Care</span>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <div class="material-card text-center">
+                        <i class="fas fa-soap fa-3x feature-icon mb-3 text-warning"></i>
+                        <h4 class="mb-3">Silk</h4>
+                        <p>Delicate fabric requiring gentle handling. Dry clean recommended.</p>
+                        <span class="badge bg-warning text-dark">Delicate</span>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <div class="material-card text-center">
+                        <i class="fas fa-cut fa-3x feature-icon mb-3 text-danger"></i>
+                        <h4 class="mb-3">Wool</h4>
+                        <p>Requires special care. Professional cleaning prevents shrinkage.</p>
+                        <span class="badge bg-danger">Professional Care</span>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <div class="material-card text-center">
+                        <i class="fas fa-shirt fa-3x feature-icon mb-3 text-success"></i>
+                        <h4 class="mb-3">Synthetic</h4>
+                        <p>Versatile fabrics. Most can be machine washed with care.</p>
+                        <span class="badge bg-success">Moderate Care</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faqs" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="accordion" id="accordionFAQs">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            How long does a typical laundry service take?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQs">
+                        <div class="accordion-body">
+                            Our standard service takes 24-48 hours. For urgent needs, we offer RapidDG Express with 4-hour turnaround.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Do you offer pickup and delivery?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQs">
+                        <div class="accordion-body">
+                            Yes! We provide free pickup and delivery within our service area. Simply schedule your pickup online.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            What payment methods do you accept?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQs">
+                        <div class="accordion-body">
+                            We accept credit/debit cards, PayPal, and mobile payment methods like Apple Pay and Google Pay.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="bookk.html" class="text-white">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6>Contact Us</h6>
+                    <p>Email: support@dhobig.com<br>Phone: (555) 123-4567</p>
+                </div>
+                <div class="col-md-4">
+                    <h6>Follow Us</h6>
+                    <div>
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p>&copy; Machiraju HariRam.@ All Rights Reserved.</p>
+        </div>
+    </footer>
+   
+
+    <!-- Optional: Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
